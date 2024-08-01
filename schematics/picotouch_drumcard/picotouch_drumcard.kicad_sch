@@ -3583,8 +3583,8 @@
 		(uuid "000d34ea-e122-4ddf-b882-b783d0bae31d")
 	)
 	(no_connect
-		(at 93.98 68.58)
-		(uuid "161eb02f-1c98-45b1-9c63-0b645d85bf77")
+		(at 93.98 86.36)
+		(uuid "193fc3ba-be17-412c-8fa6-47808ab07d54")
 	)
 	(no_connect
 		(at 29.21 93.98)
@@ -3611,12 +3611,12 @@
 		(uuid "58b4f67c-e3cc-4317-8237-50dd05dfbab2")
 	)
 	(no_connect
-		(at 77.47 71.12)
-		(uuid "6c1735f3-4aa3-4a3b-b202-0f8d10d9eba1")
+		(at 91.44 134.62)
+		(uuid "64ee2775-0a41-430f-948f-a6226ef6950a")
 	)
 	(no_connect
-		(at 93.98 73.66)
-		(uuid "7130e212-e810-4b3f-a640-5413c35d5bcb")
+		(at 77.47 71.12)
+		(uuid "6c1735f3-4aa3-4a3b-b202-0f8d10d9eba1")
 	)
 	(no_connect
 		(at 77.47 58.42)
@@ -3635,6 +3635,10 @@
 		(uuid "9f7e17c1-c566-4d14-9819-83de6934dcfd")
 	)
 	(no_connect
+		(at 91.44 165.1)
+		(uuid "a04afc6d-3f41-441f-a609-3608ad194b2f")
+	)
+	(no_connect
 		(at 157.48 153.67)
 		(uuid "bab9d894-0594-4ce8-8bfb-1b2cac8f4232")
 	)
@@ -3645,10 +3649,6 @@
 	(no_connect
 		(at 91.44 186.69)
 		(uuid "bf863c72-fe21-4764-9972-2bc4ff0e0177")
-	)
-	(no_connect
-		(at 93.98 66.04)
-		(uuid "e572235d-1cf5-47c0-9153-fa553d53480a")
 	)
 	(no_connect
 		(at 157.48 156.21)
@@ -3710,7 +3710,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.312 154.94) (xy 73.66 154.94)
+			(xy 82.55 154.94) (xy 73.66 154.94)
 		)
 		(stroke
 			(width 0)
@@ -3860,16 +3860,6 @@
 	)
 	(wire
 		(pts
-			(xy 92.202 167.64) (xy 88.392 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "293317f7-f974-4b6f-8a36-c5e95c857074")
-	)
-	(wire
-		(pts
 			(xy 87.63 132.08) (xy 87.63 129.54)
 		)
 		(stroke
@@ -3990,7 +3980,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 129.54) (xy 87.63 129.54)
+			(xy 91.44 129.54) (xy 87.63 129.54)
 		)
 		(stroke
 			(width 0)
@@ -4190,7 +4180,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.312 162.56) (xy 83.312 154.94)
+			(xy 82.55 162.56) (xy 82.55 154.94)
 		)
 		(stroke
 			(width 0)
@@ -4220,7 +4210,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 137.16) (xy 92.71 137.16)
+			(xy 90.17 137.16) (xy 91.44 137.16)
 		)
 		(stroke
 			(width 0)
@@ -4520,7 +4510,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 132.08) (xy 87.63 132.08)
+			(xy 91.44 132.08) (xy 87.63 132.08)
 		)
 		(stroke
 			(width 0)
@@ -4760,6 +4750,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 160.02) (xy 91.44 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c747c3d9-b6c6-4ce4-afba-aa05015a7b07")
+	)
+	(wire
+		(pts
 			(xy 148.59 118.11) (xy 157.48 118.11)
 		)
 		(stroke
@@ -4827,16 +4827,6 @@
 			(type default)
 		)
 		(uuid "cdad6c89-974e-4d1d-9ae3-cb0ca902391a")
-	)
-	(wire
-		(pts
-			(xy 92.202 162.56) (xy 83.312 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce4eecf6-2e5c-4477-b3ca-d58dbfc3cc7d")
 	)
 	(wire
 		(pts
@@ -4940,6 +4930,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 167.64) (xy 91.44 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e21b7756-b91f-4f39-8919-7bede29502a3")
+	)
+	(wire
+		(pts
 			(xy 99.06 110.49) (xy 99.06 113.03)
 		)
 		(stroke
@@ -4980,6 +4980,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 162.56) (xy 91.44 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eac21321-9005-49b6-a57f-7786f5aadeaa")
+	)
+	(wire
+		(pts
 			(xy 236.22 91.44) (xy 246.38 91.44)
 		)
 		(stroke
@@ -5007,16 +5017,6 @@
 			(type default)
 		)
 		(uuid "f42860a6-9b82-4490-a9cd-889cb718cd89")
-	)
-	(wire
-		(pts
-			(xy 92.202 160.02) (xy 73.66 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f46ae45c-ceb6-4c2b-8079-9f027e0e0147")
 	)
 	(wire
 		(pts
@@ -7176,7 +7176,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Audio:AudioJack4")
-		(at 97.282 165.1 180)
+		(at 96.52 165.1 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7185,7 +7185,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e98c9b2-35ab-4512-9c43-94aa549cdf9b")
 		(property "Reference" "J2"
-			(at 106.172 161.9249 0)
+			(at 105.41 161.9249 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7194,7 +7194,7 @@
 			)
 		)
 		(property "Value" "AudioJack4"
-			(at 106.172 164.4649 0)
+			(at 105.41 164.4649 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7203,7 +7203,7 @@
 			)
 		)
 		(property "Footprint" "todbot_stuff:Jack_3.5mm_PJ320D_Horizontal"
-			(at 97.282 165.1 0)
+			(at 96.52 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7212,7 +7212,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 97.282 165.1 0)
+			(at 96.52 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7221,7 +7221,7 @@
 			)
 		)
 		(property "Description" "Audio Jack, 4 Poles (TRRS)"
-			(at 97.282 165.1 0)
+			(at 96.52 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8849,7 +8849,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 88.392 167.64 0)
+		(at 86.36 167.64 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8858,7 +8858,7 @@
 		(dnp no)
 		(uuid "54f0a0a5-536b-4f73-9097-a251ae875a04")
 		(property "Reference" "#PWR016"
-			(at 88.392 173.99 0)
+			(at 86.36 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8867,7 +8867,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 84.582 169.418 0)
+			(at 82.55 169.418 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8875,7 +8875,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 88.392 167.64 0)
+			(at 86.36 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8884,7 +8884,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.392 167.64 0)
+			(at 86.36 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8893,7 +8893,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 88.392 167.64 0)
+			(at 86.36 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9584,7 +9584,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Audio:AudioJack4")
-		(at 97.79 134.62 180)
+		(at 96.52 134.62 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9593,7 +9593,7 @@
 		(fields_autoplaced yes)
 		(uuid "6d5e5f84-2328-430e-b7e9-6935459ffb9c")
 		(property "Reference" "J3"
-			(at 106.68 131.4449 0)
+			(at 105.41 131.4449 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9602,7 +9602,7 @@
 			)
 		)
 		(property "Value" "AudioJack4"
-			(at 106.68 133.9849 0)
+			(at 105.41 133.9849 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9611,7 +9611,7 @@
 			)
 		)
 		(property "Footprint" "todbot_stuff:Jack_3.5mm_PJ320D_Horizontal"
-			(at 97.79 134.62 0)
+			(at 96.52 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9620,7 +9620,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 97.79 134.62 0)
+			(at 96.52 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9629,7 +9629,7 @@
 			)
 		)
 		(property "Description" "Audio Jack, 4 Poles (TRRS)"
-			(at 97.79 134.62 0)
+			(at 96.52 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
