@@ -33,3 +33,7 @@ fp-info-cache
 
 # lock files
 *.lck
+
+# production output
+production/
+fabrication-toolkit-options.json
