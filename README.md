@@ -15,3 +15,16 @@ Successor to the [picotouch_bizcard MIDI controller](https://github.com/todbot/p
 * Battery powered, with lipo battery charging circuit
 * Powered by Raspberry Pi Pico board
 * Programmable with CircuitPython, Arduino, etc.
+
+
+# Example code
+
+* Drum sequencer + synth
+* MIDI controller
+* Macropad
+* USB-MIDI interface
+
+
+# 
+
+https://github.com/user-attachments/assets/234cb804-bad1-4454-a92b-b1dc36a663cc
