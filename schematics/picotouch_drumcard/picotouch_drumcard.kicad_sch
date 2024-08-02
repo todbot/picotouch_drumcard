@@ -6856,7 +6856,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "123e020a-afed-4e41-bf3e-5ecb457838c7")
-		(property "Reference" "R200"
+		(property "Reference" "R19"
 			(at 48.514 127.508 90)
 			(effects
 				(font
@@ -6908,7 +6908,7 @@
 		(instances
 			(project "picotouch_drumcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R200")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -7578,6 +7578,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C431535"
+			(at 96.52 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "S"
 			(uuid "776b8e98-d07b-4e2b-b723-7acef967b67f")
 		)
@@ -7856,6 +7865,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C424093"
+			(at 113.03 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "e40b8643-3542-447f-954c-969a1e426999")
 		)
@@ -7955,7 +7973,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "37fb6679-a391-472b-aab6-322c80e7425e")
-		(property "Reference" "R201"
+		(property "Reference" "R20"
 			(at 69.342 133.604 90)
 			(effects
 				(font
@@ -8007,7 +8025,7 @@
 		(instances
 			(project "picotouch_drumcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R201")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -8023,7 +8041,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "38866c9d-bf72-49f9-b60c-de232e1ee04a")
-		(property "Reference" "R203"
+		(property "Reference" "R22"
 			(at 40.132 160.274 90)
 			(effects
 				(font
@@ -8075,7 +8093,7 @@
 		(instances
 			(project "picotouch_drumcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R203")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -8628,6 +8646,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C130880"
+			(at 140.97 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6715a1e1-19ee-4b2e-8b1e-42e52e63fcc1")
 		)
@@ -8709,6 +8736,15 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 77.47 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C64898"
+			(at 77.47 156.21 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8843,6 +8879,15 @@
 			)
 		)
 		(property "Description" "20ch Touch Sensor controller, TSSOP28"
+			(at 135.89 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C95876"
 			(at 135.89 134.62 0)
 			(effects
 				(font
@@ -9903,7 +9948,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "64c10c30-71c1-469e-b630-a021bb765f6a")
-		(property "Reference" "R205"
+		(property "Reference" "R24"
 			(at 78.994 185.928 90)
 			(effects
 				(font
@@ -9955,7 +10000,7 @@
 		(instances
 			(project "picotouch_bizcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R205")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -10204,6 +10249,15 @@
 			)
 		)
 		(property "Description" "Audio Jack, 4 Poles (TRRS)"
+			(at 96.52 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C431535"
 			(at 96.52 134.62 0)
 			(effects
 				(font
@@ -10704,7 +10758,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "847efd98-ab62-4478-b118-923fe1a65e5b")
-		(property "Reference" "R101"
+		(property "Reference" "R18"
 			(at 103.378 106.934 90)
 			(effects
 				(font
@@ -10756,7 +10810,7 @@
 		(instances
 			(project "picotouch_drumcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R101")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -11121,7 +11175,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "926a5124-4fce-4dce-9d79-bd81d2660c08")
-		(property "Reference" "R100"
+		(property "Reference" "R17"
 			(at 97.028 106.934 90)
 			(effects
 				(font
@@ -11173,7 +11227,7 @@
 		(instances
 			(project "picotouch_drumcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R100")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -11503,6 +11557,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C431535"
+			(at 193.04 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "S"
 			(uuid "2579db02-c590-4b79-8b11-580d91e0aabf")
 		)
@@ -11600,7 +11663,7 @@
 		(dnp no)
 		(uuid "a4b3cc87-c679-4f7c-a298-e9498156a47e")
 		(property "Reference" "R16"
-			(at 113.792 106.934 90)
+			(at 109.728 106.934 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11608,7 +11671,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 109.728 106.934 90)
+			(at 113.792 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11801,7 +11864,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a9942e75-682e-447d-ac29-ed3814e75276")
-		(property "Reference" "R204"
+		(property "Reference" "R23"
 			(at 78.994 179.578 90)
 			(effects
 				(font
@@ -11853,7 +11916,7 @@
 		(instances
 			(project "picotouch_bizcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R204")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -12069,7 +12132,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "acc934ef-4e07-42dc-8323-5f9930f7dce7")
-		(property "Reference" "R202"
+		(property "Reference" "R21"
 			(at 83.312 133.604 90)
 			(effects
 				(font
@@ -12121,7 +12184,7 @@
 		(instances
 			(project "picotouch_drumcard"
 				(path "/5e315703-690d-40b0-a846-b905406b612c"
-					(reference "R202")
+					(reference "R21")
 					(unit 1)
 				)
 			)
