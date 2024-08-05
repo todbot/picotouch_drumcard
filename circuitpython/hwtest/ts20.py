@@ -63,10 +63,10 @@ _TS20_RD_CH4 = const(0x37)
 _TS20_RD_CH5 = const(0x38)
 _TS20_RD_CH6 = const(0x39)
 
-#PADSENS = const(0b0101)  # 0x55 default
+# PADSENS = const(0b0101)  # 0x55 default
 PADSENS = const(0b1111)  # 0xff
-#PADSENS = const(0b0000)  # 0x00
-PADSENS2 = const((PADSENS<<4) | PADSENS)
+# PADSENS = const(0b0000)  # 0x00
+PADSENS2 = const((PADSENS << 4) | PADSENS)
 
 # fmt: off
 # default config for 20 touch sensors with low-impedance, low-sensitivity
@@ -120,9 +120,9 @@ _config_info_default = [
 class TS20:
     """Driver for the TS20 connected over I2C."""
 
-    def __init__(self, i2c,
-                 address = _TS20_DEFAULT_ADDRESS,
-                 config_info = _config_info_default):
+    def __init__(
+        self, i2c, address=_TS20_DEFAULT_ADDRESS, config_info=_config_info_default
+    ):
         self._i2c = i2c_device.I2CDevice(i2c, address)
         self._buf = bytearray(2)
         self.write_config(config_info)
@@ -146,12 +146,12 @@ class TS20:
         """Write out data beginning at start address."""
         with self._i2c as i2c:
             i2c.write(bytes((start,)) + data)
-            
+
     def write_config(self, config_info) -> None:
         """Write configuration set to TS20
         config_info is array of tuples (reg_addr, reg_val)
         """
-        for reg_addr, reg_val in config_info: 
+        for reg_addr, reg_val in config_info:
             self._write_register(reg_addr, reg_val)
 
     def read_touches(self):
@@ -160,14 +160,14 @@ class TS20:
         """
         raw_touch = self._read_block(_TS20_OUTPUT1, 3)
         # convert 3 bytes of raw touch data to single int bitfield
-        t = raw_touch[0] | (raw_touch[1]<<7) | (raw_touch[2] << 15)
+        t = raw_touch[0] | (raw_touch[1] << 7) | (raw_touch[2] << 15)
         # turn bitfield into list
         touches = [t >> i & 1 for i in range(21)]  # bit21 is "isnoisy"
         return touches
 
-    #def set_response_speed(self,
+    # def set_response_speed(self,
 
-    def set_pad_sensitivities(self,values):
+    def set_pad_sensitivities(self, values):
         """Set sensitivies for all pads
         'values' is a 20-element list of pad sensitivies, each element
         from 0-15 (most sensitive to least)
@@ -178,11 +178,10 @@ class TS20:
         sens_vals[2] = values[5] << 4 | values[4]  # ch6,5
         sens_vals[3] = 0b1111 << 4 | values[6]  # ch-,7
         sens_vals[4] = values[8] << 4 | values[7]  # ch9,8
-        sens_vals[5] = values[10] << 4 | values[9]   # ch11,10
+        sens_vals[5] = values[10] << 4 | values[9]  # ch11,10
         sens_vals[6] = values[12] << 4 | values[11]  # ch13,12
         sens_vals[7] = values[14] << 4 | values[13]  # ch15,14
         sens_vals[8] = values[16] << 4 | values[15]  # ch15,14
         sens_vals[9] = values[18] << 4 | values[17]  # ch15,14
         sens_vals[10] = values[19] << 4 | values[19]  # ch-,20
-        return self._write_block( _TS20_SEN_PWM1, sens_vals)
-       
+        return self._write_block(_TS20_SEN_PWM1, sens_vals)

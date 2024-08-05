@@ -4771,7 +4771,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 19.05) (xy 156.21 22.86)
+			(xy 156.21 21.59) (xy 156.21 22.86)
 		)
 		(stroke
 			(width 0)
@@ -5121,7 +5121,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 25.4) (xy 139.7 27.94)
+			(xy 139.7 24.13) (xy 139.7 27.94)
 		)
 		(stroke
 			(width 0)
@@ -5228,6 +5228,16 @@
 			(type default)
 		)
 		(uuid "8917bcf5-28e5-449a-83be-179d61010610")
+	)
+	(wire
+		(pts
+			(xy 114.3 24.13) (xy 114.3 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a0b1e2c-9ee3-4524-bb9f-e993f9bbde2a")
 	)
 	(wire
 		(pts
@@ -5461,7 +5471,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 25.4) (xy 132.08 27.94)
+			(xy 132.08 21.59) (xy 132.08 27.94)
 		)
 		(stroke
 			(width 0)
@@ -5911,12 +5921,12 @@
 	)
 	(text "5.0k = 200mA\n2.0k = 500mA\n1.0k = 1000mA"
 		(exclude_from_sim no)
-		(at 162.56 47.752 0)
+		(at 159.258 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left top)
 		)
 		(uuid "29474861-b92f-440d-a5dd-32a12eb303f6")
 	)
@@ -6753,7 +6763,7 @@
 			)
 		)
 		(property "Value" "SSSS811101"
-			(at 107.696 49.022 0)
+			(at 114.808 48.514 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8559,7 +8569,7 @@
 		(dnp no)
 		(uuid "368f3767-7743-428d-8e28-a80676bffa89")
 		(property "Reference" "U3"
-			(at 164.084 20.066 0)
+			(at 159.512 22.098 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8568,7 +8578,7 @@
 			)
 		)
 		(property "Value" "MCP73831-2-OT"
-			(at 164.338 22.098 0)
+			(at 173.736 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11097,7 +11107,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 139.7 25.4 0)
+		(at 139.7 24.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11105,7 +11115,7 @@
 		(dnp no)
 		(uuid "70d4398b-86e3-435d-99bf-566a12e826c9")
 		(property "Reference" "#PWR052"
-			(at 139.7 29.21 0)
+			(at 139.7 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11114,7 +11124,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 139.7 20.32 0)
+			(at 139.7 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11122,7 +11132,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 25.4 0)
+			(at 139.7 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11131,7 +11141,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 25.4 0)
+			(at 139.7 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11140,7 +11150,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 139.7 25.4 0)
+			(at 139.7 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13129,7 +13139,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 114.3 27.94 0)
+		(at 114.3 24.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13137,7 +13147,7 @@
 		(dnp no)
 		(uuid "b0eb69c1-90c8-4fe9-bc35-cc7aa4cbdd54")
 		(property "Reference" "#PWR025"
-			(at 114.3 31.75 0)
+			(at 114.3 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13146,7 +13156,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 114.3 22.86 0)
+			(at 114.3 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13154,7 +13164,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 114.3 27.94 0)
+			(at 114.3 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13163,7 +13173,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 27.94 0)
+			(at 114.3 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13172,7 +13182,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 114.3 27.94 0)
+			(at 114.3 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14928,7 +14938,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 156.21 19.05 0)
+		(at 156.21 21.59 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14938,7 +14948,7 @@
 		(fields_autoplaced yes)
 		(uuid "d714ddd8-5b96-4c34-9961-325117689579")
 		(property "Reference" "#PWR021"
-			(at 156.21 22.86 0)
+			(at 156.21 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14947,7 +14957,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 156.21 13.97 0)
+			(at 156.21 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14955,7 +14965,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 19.05 0)
+			(at 156.21 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14964,7 +14974,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 19.05 0)
+			(at 156.21 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14973,7 +14983,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 156.21 19.05 0)
+			(at 156.21 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15721,7 +15731,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 132.08 25.4 0)
+		(at 132.08 21.59 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15731,7 +15741,7 @@
 		(fields_autoplaced yes)
 		(uuid "f08c15bd-f6d6-4636-9c66-18f93d654a5c")
 		(property "Reference" "#PWR053"
-			(at 132.08 29.21 0)
+			(at 132.08 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15740,7 +15750,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 132.08 20.32 0)
+			(at 132.08 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15748,7 +15758,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 25.4 0)
+			(at 132.08 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15757,7 +15767,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 25.4 0)
+			(at 132.08 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15766,7 +15776,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 132.08 25.4 0)
+			(at 132.08 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)

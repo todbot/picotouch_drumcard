@@ -14,23 +14,26 @@ import usb_midi
 import tmidi
 import ts20
 
+# fmt: off
 led_pins = (
     board.GP2, board.GP3, board.GP4, board.GP5,
     board.GP27, board.GP26, board.GP22, board.GP21,
     board.GP6, board.GP7, board.GP8, board.GP9,
     board.GP14, board.GP19, board.GP20
 )
+# fmt: on
 
 i2c_sda_pin = board.GP16
 i2c_scl_pin = board.GP17
 midi_out_pin = board.GP0
 midi_in_pin = board.GP1
 
-midi_uart = busio.UART(tx=midi_out_pin, rx=midi_in_pin, baudrate=31250, timeout=0.0001)
-
 i2c = busio.I2C(scl=i2c_scl_pin, sda=i2c_sda_pin)
-
 ts20 = ts20.TS20(i2c)
+
+uart = busio.UART(tx=midi_out_pin, rx=midi_in_pin, baudrate=31250, timeout=0.0001)
+midi_usb = tmidi.MIDI(midi_in=usb_midi.ports[0], midi_out=usb_midi.ports[1])
+midi_uart = tmidi.MIDI(midi_in=uart)
 
 leds = []
 num_leds = len(led_pins)
@@ -38,10 +41,10 @@ num_leds = len(led_pins)
 for pin in led_pins:
     led = pwmio.PWMOut(pin, frequency=25000, duty_cycle=0)
     leds.append(led)
-
+    
 def set_led(n, val=1.0):
     leds[n].duty_cycle = int(65535 * val)
-
+    
 def dim_all_leds(amount=0.95):
     """Dim all LEDs by an amount"""
     for led in leds:
