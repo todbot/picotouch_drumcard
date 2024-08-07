@@ -63,9 +63,9 @@ _TS20_RD_CH4 = const(0x37)
 _TS20_RD_CH5 = const(0x38)
 _TS20_RD_CH6 = const(0x39)
 
-# PADSENS = const(0b0101)  # 0x55 default
+#PADSENS = const(0b0101)  # 0x55 default
 PADSENS = const(0b1111)  # 0xff
-# PADSENS = const(0b0000)  # 0x00
+#PADSENS = const(0b0000)  # 0x00
 PADSENS2 = const((PADSENS << 4) | PADSENS)
 
 # fmt: off
@@ -101,15 +101,18 @@ _config_info_default = [
     #(_TS20_GTRL1, 0x4B),  # 0x4B is from Arduino sketch, 0x4a is reset default (0b010_01_010
     #(_TS20_GTRL1, 0x4a), # reset default
     #(_TS20_GTRL1, 0x48), # gives a snappier response!
-    (_TS20_GTRL1, 0x6a), # MS=1 "fast mode"
+    (_TS20_GTRL1, 0x6a), # MS=1 "fast mode", SSC=1 normal steps
+    
     (_TS20_CAL_HOLD1, 0x00),  # Calibration On, ch 1-7
     (_TS20_CAL_HOLD2, 0x00),  # Calibration On, ch 8-14
     (_TS20_CAL_HOLD2, 0x00),  # Calibration On, ch 9-20
-    (_TS20_ERR_CTRL, 0x0D),
-    (_TS20_CAL_CTRL, 0xFA),
+    #(_TS20_ERR_CTRL, 0x0D),
+    (_TS20_ERR_CTRL, 0x0F),
+    #(_TS20_CAL_CTRL, 0xFA),
+    (_TS20_CAL_CTRL, 0xAF),
     # General Ctrl2, RB_SEL=Noram, Sleep Mode=Disable, S/W Reset=Disable,
     #                IMP_SEL=High Imp. S/M_Mode=Multi, VPM=0
-    # (_TS20_GTRL2, 0x12,     # Software Reset Disable (Clear)
+    #(_TS20_GTRL2, 0x12),     # Software Reset Disable (Clear)
     # General Ctrl2, RB_SEL=Noram, Sleep Mode=Disable, S/W Reset=Disable,
     #                IMP_SEL=Low Imp. S/M_Mode=Multi, VPM=0
     (_TS20_GTRL2, 0x02),     # Software Reset Disable (Clear)
