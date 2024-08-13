@@ -55,6 +55,7 @@ pad_to_led = (
 # fmt: on
 
 midi_base = 42
+midi_chan = 0
 pad_to_midi = ( 0, 2, 4, 5, 7, 9, 10, 12)
 
 class DrumCardHardware:
@@ -64,7 +65,7 @@ class DrumCardHardware:
 
         self.uart = busio.UART(tx=midi_out_pin, rx=midi_in_pin, baudrate=31250, timeout=0.0001)
         self.midi_usb = tmidi.MIDI(midi_in=usb_midi.ports[0], midi_out=usb_midi.ports[1])
-        self.midi_uart = tmidi.MIDI(midi_in=self.uart)
+        self.midi_uart = tmidi.MIDI(midi_in=self.uart, midi_out=self.uart)
 
         # set up the synth->audio system
         self.audio = audiopwmio.PWMAudioOut(audio_pin)
@@ -176,13 +177,22 @@ while True:
             ledi = pad_to_led[i]
             hw.set_led(ledi, t)
             if i < 8:
-                notes[i] = synthio.Note(synthio.midi_to_hz(midi_base + pad_to_midi[i])) # waveform=hw.wave_saw)
+                midi_note_num = midi_base + pad_to_midi[i]
+                notes[i] = synthio.Note(synthio.midi_to_hz(midi_note_num)) 
                 hw.synth.press(notes[i])
+                msg = tmidi.Message(tmidi.NOTE_ON, midi_chan, midi_note_num, 127)
+                hw.midi_uart.send(msg)
+                hw.midi_usb.send(msg)
+                
         if not t and last_touches[i]: # released
             ledi = pad_to_led[i]
             hw.set_led(ledi, t)
             if i < 8:
                 hw.synth.release(notes[i])
+                midi_note_num = midi_base + pad_to_midi[i]
+                msg = tmidi.Message(tmidi.NOTE_OFF, midi_chan, midi_note_num, 0)
+                hw.midi_uart.send(msg)
+                hw.midi_usb.send(msg)
             
     last_touches = touches
     
