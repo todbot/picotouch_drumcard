@@ -183,6 +183,10 @@ while True:
                 msg = tmidi.Message(tmidi.NOTE_ON, midi_chan, midi_note_num, 127)
                 hw.midi_uart.send(msg)
                 hw.midi_usb.send(msg)
+            elif i == 11:  # up arrow
+                midi_base = min( midi_base + 12, 96)
+            elif i == 13:  # down arrow
+                midi_base = max( midi_base - 12, 12)
                 
         if not t and last_touches[i]: # released
             ledi = pad_to_led[i]
