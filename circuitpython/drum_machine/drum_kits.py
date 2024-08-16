@@ -38,6 +38,7 @@ def load_drumkit(kits, kit_index):
     Load WaveFile objects upfront into waves array, by kit index,
     in attempt to reduce play latency
     """
+    print("load_drumkit:", kit_index)
     kit_name = kits['kit_names'][kit_index]
     num_pads = len(kits[kit_name])
     waves = [None] * num_pads

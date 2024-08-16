@@ -159,9 +159,9 @@ class DrumCardHardware:
     def bad_touch(self):
         ts = self.touches
         return (
-            #(ts.count(1) > 2) or
+            (ts.count(1) > 2) or
             (ts[20]) or
-            ((ts[7] and ts[8] and t[9]) or
+            ((ts[7] and ts[8] and ts[9]) or
              (ts[9] and ts[10] and ts[11]) or
              (ts[10] and ts[11] and ts[12]))
         )

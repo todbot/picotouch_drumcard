@@ -1,27 +1,3 @@
-# import time, board, busio
-
-# from ts20 import TS20
-
-# i2c_sda_pin = board.GP16
-# i2c_scl_pin = board.GP17
-
-# i2c = busio.I2C(i2c_scl_pin, i2c_sda_pin)
-
-# ts20 = TS20(i2c)
-
-# print("hi")
-
-# while True:
-#     touches = ts20.read_touches()
-#     print(touches)
-#     time.sleep(0.02)
-
-    
-
-
-##############################################################
-
-
 # SPDX-FileCopyrightText: Copyright (c) 2024 Tod Kurt
 # SPDX-License-Identifier: MIT
 """
@@ -137,7 +113,7 @@ async def midi_handler():
                 print("unknown message:",msg)
 
 async def ui_handler():
-    global rec_mode, rec_held, touches
+    global rec_mode, rec_held, touches, kit_index, waves, num_trigs
     trig_pressed = False
     last_padlit_millis = ticks_ms()
     last_touches = hw.read_touch()
@@ -148,8 +124,17 @@ async def ui_handler():
         hw.set_led(hw.LED_PLAY, seq.playing)
         hw.set_led(hw.LED_REC, rec_mode or rec_held)
 
+        now_millis = ticks_ms()
+        # turn off any triggered pads after a while
+        if ticks_diff(now_millis, last_padlit_millis) > pad_lit_millis:
+            last_padlit_millis = now_millis
+            for i in range(num_trigs):
+                if pads_lit[i]:
+                    pads_lit[i] = False
+                    hw.set_led(i, False)
+
         touches = hw.read_touch()
-        #if hw.bad_touch(): continue
+        if hw.bad_touch(): continue
         
         # read touchpad
         for i, t in enumerate(touches):
@@ -175,6 +160,10 @@ async def ui_handler():
                     seq.change_pattern(seq.patt_index+1)
                 elif i == hw.PAD_B:
                     seq.change_pattern(seq.patt_index-1)
+                elif i == hw.PAD_UP:
+                    kit_index = (kit_index + 1) % len(kits['kit_names'])
+                    waves, num_trigs = load_drumkit(kits, kit_index)
+                    
             
             if not t and last_touches[i]: # released
                 ledi = hw.pad_to_led(i)
@@ -191,15 +180,6 @@ async def ui_handler():
                         rec_mode = not rec_mode
                 
         last_touches = touches
-
-        now_millis = ticks_ms()
-        # turn off any triggered pads after a while
-        if ticks_diff(now_millis, last_padlit_millis) > pad_lit_millis:
-            last_padlit_millis = now_millis
-            for i in range(num_trigs):
-                if pads_lit[i]:
-                    pads_lit[i] = False
-                    hw.set_led(i, False)
 
         
 async def debug_handler():
